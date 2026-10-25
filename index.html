@@ -8,31 +8,8 @@
 <body style="font-family:sans-serif;background:#f4f1ea;color:#1c1915;padding:28px;max-width:34rem;line-height:1.45">
 <p style="letter-spacing:.12em;text-transform:uppercase;font-size:12px;margin:0">Suite</p>
 <h1 style="font-size:2.4rem;line-height:1;margin:8px 0 12px">Suite Field</h1>
-<p>This opens the field phone. It uses the same company as the desk.</p>
-<p><a id="open" href="Suite-Field.apk" style="display:inline-block;background:#1e4d38;color:#fff;padding:16px 20px;text-decoration:none;font-size:1.1rem">Open Suite Field</a></p>
-<p>If the phone asks, tap Install, then Open. Sign in with the last name from the desk.</p>
-<script>
-  var apk = "Suite-Field.apk";
-  var launch = "intent:#Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;package=com.suitefield.phone;end";
-  function openPhone() {
-    if (!/Android/i.test(navigator.userAgent)) {
-      location.href = apk;
-      return;
-    }
-    var left = false;
-    document.addEventListener("visibilitychange", function () {
-      if (document.hidden) left = true;
-    });
-    location.href = launch;
-    setTimeout(function () {
-      if (!left && document.visibilityState === "visible") location.href = apk;
-    }, 900);
-  }
-  document.getElementById("open").addEventListener("click", function (event) {
-    event.preventDefault();
-    openPhone();
-  });
-  if (/Android/i.test(navigator.userAgent)) openPhone();
-</script>
+<p>This installs the field phone. It uses the same company as the desk.</p>
+<p><a href="Suite-Field.apk" style="display:inline-block;background:#1e4d38;color:#fff;padding:16px 20px;text-decoration:none;font-size:1.1rem">Install Suite Field</a></p>
+<p>Tap Install Suite Field. When the download finishes, tap that file, then tap Install. Open Suite Field and sign in with the last name from the desk.</p>
 </body>
 </html>
